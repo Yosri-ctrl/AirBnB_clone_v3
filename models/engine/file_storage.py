@@ -76,15 +76,13 @@ class FileStorage:
         all_objs = self.all(cls)
         for key in all_objs.keys():
             if key == id:
-                return all_objs[key]
+                return (all_objs[key])
         return None
 
     def count(self, cls=None):
         """Returns the number of objects in storage"""
         if cls is not None:
             if cls in FileStorage.__objects.items():
-                return(len(self.all(cls)))
+                return (len(self.all(cls)))
         else:
-            return len(self.all())
-
-    
+            return (len(self.all()))
